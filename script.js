@@ -16,3 +16,22 @@ document.getElementById('generate-btn').addEventListener('click', function() {
     const randomFact = facts[randomIndex];
     document.getElementById('fact-display').textContent = randomFact;
 });
+// Add this to your script.js
+document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('background-video');
+    const container = document.querySelector('.container');
+    
+    // Add hover effect to make container more transparent on hover
+    container.addEventListener('mouseenter', function() {
+        this.style.backgroundColor = 'rgba(255, 255, 255, 0.6)';
+        this.style.transition = 'background-color 0.3s ease';
+    });
+    
+    container.addEventListener('mouseleave', function() {
+        this.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
+    });
+
+   
+    
+    container.appendChild(toggleButton);
+});
